@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 def index_range(page: int, page_size: int) -> tuple:
     """
     This method returns a tuple of start index and end index for a given page and page size.
