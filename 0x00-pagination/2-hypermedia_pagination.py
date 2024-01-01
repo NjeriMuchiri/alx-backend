@@ -44,7 +44,7 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-        """Retrieve a specific page of the dataset.
+        """method that retrieves a specific page of the dataset.
 
         Args:
             page (int, optional): The page number. Defaults to 1.

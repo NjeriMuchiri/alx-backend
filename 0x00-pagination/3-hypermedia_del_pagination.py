@@ -12,7 +12,7 @@ class Server:
         self.__dataset = None
         self.__indexed_dataset = None
 
-    def dataset(self) -> List:
+    def dataset(self) -> List[List]:
         """Cached dataset
         """
         if self.__dataset is None:
@@ -23,7 +23,7 @@ class Server:
 
         return self.__dataset
 
-    def indexed_dataset(self) -> Dict:
+    def indexed_dataset(self) -> Dict[int, List]:
         """Dataset indexed by sorting position, starting at 0
         """
         if self.__indexed_dataset is None:
@@ -35,7 +35,7 @@ class Server:
         return self.__indexed_dataset
 
     def get_hyper_index(self, index: Optional[int] = None, page_size: int = 10) -> Dict:
-        """Retrieve hypermedia information for a specific index.
+        """This method retrieves hypermedia information for a specific index.
 
         Args:
             index (int, optional): The start index of the return page. Defaults to None.
