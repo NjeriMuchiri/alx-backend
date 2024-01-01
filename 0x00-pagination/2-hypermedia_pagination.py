@@ -5,7 +5,7 @@ from typing import List
 import math
 
 
-def index_range(page: int, page_size: int) -> tuple[int, int]:
+def index_range(page: int, page_size: int) -> tuple:
     """
     Returns a tuple of start index and end index for a
     a given page and page size.
