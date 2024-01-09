@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-
-
 from flask import Flask, render_template, request
 from flask_babel import Babel
 
+
 app = Flask(__name__)
 babel = Babel(app)
+
 
 class Config:
     LANGUAGES = ["en", "fr"]
@@ -23,6 +23,7 @@ def get_locale():
 def index():
     "Method that renders our template"
     return render_template('2-index.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
