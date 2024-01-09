@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+# 4-app.py
 
 from flask import Flask, render_template, request
 from flask_babel import Babel, _
@@ -12,7 +12,6 @@ class Config:
     BABEL_DEFAULT_TIMEZONE = "UTC"
 
 app.config.from_object(Config)
-
 
 @babel.localeselector
 def get_locale():
@@ -28,9 +27,8 @@ def get_locale():
 
 @app.route('/')
 def index():
-    """method that renders our html page"""
+    """Method for rendering template"""
     return render_template('4-index.html', home_title=_('home_title'), home_header=_('home_header'))
-
 
 if __name__ == '__main__':
     app.run(debug=True)
