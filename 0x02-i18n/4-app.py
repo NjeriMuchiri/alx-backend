@@ -18,16 +18,15 @@ def get_locale():
     """Check if the 'locale' parameter is present in the URL"""
     request_locale = request.args.get('locale')
 
-    """If the 'locale' parameter is a supported language, return it"""
+    """f the 'locale' parameter is a supported language, return it"""
     if request_locale and request_locale in app.config['LANGUAGES']:
         return request_locale
 
-    """Otherwise, resort to the previous default behavior"""
+    # Otherwise, resort to the previous default behavior
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 @app.route('/')
 def index():
-    """Method for rendering template"""
     return render_template('4-index.html', home_title=_('home_title'), home_header=_('home_header'))
 
 if __name__ == '__main__':
