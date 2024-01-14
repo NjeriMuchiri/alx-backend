@@ -20,7 +20,7 @@ def get_user(user_id):
 
 # Define get_timezone function
 @timezoneselector
-def get_timezone():
+def get_timezone() -> str:
     # Find timezone parameter in URL parameters
     user_timezone = request.args.get('timezone')
 

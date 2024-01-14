@@ -10,7 +10,7 @@ users = {
     4: {"name": "Teletubby", "locale": None, "timezone": "Europe/London"},
 }
 
-# our get_user function
+# the get_user function
 def get_user(user_id):
     return users.get(user_id)
 
