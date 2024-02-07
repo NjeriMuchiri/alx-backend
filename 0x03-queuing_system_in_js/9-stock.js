@@ -2,7 +2,7 @@ import express from 'express';
 import redis from 'redis';
 import { promisify } from 'util';
 
-// utils =================================================
+// utils
 
 const listProducts = [
   {
@@ -35,7 +35,7 @@ function getItemById(id) {
   return listProducts.filter((item) => item.itemId === id)[0];
 }
 
-// redis ==========================================
+// redis
 
 const client = redis.createClient();
 const getAsync = promisify(client.get).bind(client);
@@ -57,7 +57,7 @@ async function getCurrentReservedStockById(itemId) {
   return stock;
 }
 
-// express =============================================
+// express
 
 const app = express();
 const port = 1245;

@@ -3,9 +3,9 @@ import kue from 'kue';
 import redis from 'redis';
 import { promisify } from 'util';
 
-// utils =================================================
+// utils
 
-// redis =================================================
+// redis
 
 const client = redis.createClient();
 const getAsync = promisify(client.get).bind(client);
@@ -33,12 +33,12 @@ client.on('connect', () => {
   reservationEnabled = true;
 });
 
-// kue  =================================================
+// kue
 
 const queue = kue.createQueue();
 const queueName = 'reserve_seat';
 
-// express  =================================================
+// express
 
 const app = express();
 const port = 1245;
